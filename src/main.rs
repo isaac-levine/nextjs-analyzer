@@ -14,7 +14,7 @@ fn main() {
 
     println!("File contents:\n\n{}", source_code);
 
-    // Create a source map (for error reporting)
+    // Create a source map 
     let source_map = SourceMap::default();
 
     // Create a source file
