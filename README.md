@@ -2,7 +2,7 @@
 
 A simple static analyzer built in Rust that helps detect client-side React hooks in Next.js server components.
 
-Right now, just takes a simple JavaScript code snippet and parses the AST (Abstract Syntax Tree)
+Right now, just takes a simple JavaScript code snippet and parses the AST (Abstract Syntax Tree). The plan is to build this into a more useful code analysis tool over time.
 
 ## Example Run
 ![Example Run](https://github.com/user-attachments/assets/1e570bc7-e289-4fba-b82c-e5c00b6f45d2)
