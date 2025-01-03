@@ -1,14 +1,18 @@
 use swc_common::SourceMap;
 use swc_common::FileName;
 use swc_ecma_parser::{lexer::Lexer, Parser, StringInput, Syntax};
+use std::fs::File;
+use std::io::Read;
 
 fn main() {
-    // The code we want to analyze
-    let source_code = r#"
-        function hello() {
-            console.log("Hello, World!");
-        }
-    "#;
+
+    let mut file = File::open("code.js").expect("Can't open file!");
+    let mut source_code = String::new();
+
+    file.read_to_string(&mut source_code)
+        .expect("Oops! Can not read the file.");
+
+    println!("File contents:\n\n{}", source_code);
 
     // Create a source map (for error reporting)
     let source_map = SourceMap::default();
