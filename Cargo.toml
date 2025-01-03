@@ -9,3 +9,4 @@ swc_ecma_parser = "0.137.0"
 swc_ecma_ast = "0.107.0"
 swc_ecma_visit = "0.93.0"
 colored = "2.0.0"
+
