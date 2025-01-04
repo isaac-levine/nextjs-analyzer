@@ -5,10 +5,10 @@ use std::fs::File;
 use std::io::Read;
 
 fn main() {
-
+    
+    // Read the file contents into source_code
     let mut file = File::open("code.js").expect("Can't open file!");
     let mut source_code = String::new();
-
     file.read_to_string(&mut source_code)
         .expect("Oops! Can not read the file.");
 
@@ -37,7 +37,7 @@ fn main() {
     match parser.parse_module() {
         Ok(module) => {
             println!("Successfully parsed the code!");
-            println!("{:#?}", module); // magically pretty-print the AST
+            println!("{:#?}", module); // Pretty-print the AST 
         } 
         Err(e) => {
             println!("Failed to parse: {:?}", e);
